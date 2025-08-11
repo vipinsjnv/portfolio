@@ -84,7 +84,23 @@ hr {
   background: transparent;
   position: relative;
   width: fit-content;
-  border-bottom: 2px solid crimson;
+  transition: all 0.3s ease;
+}
+
+.main_button::before {
+  content: "";
+  display: inline-block;
+  width: 85%;
+  height: 2px;
+  position: absolute;
+  bottom: -0.2rem;
+  left: 0;
+  background-color: crimson;
+  transition: all 0.3s ease;
+}
+
+.main_button:hover::before {
+  width: 100%;
 }
 
 /* .main_button::after {
@@ -203,6 +219,10 @@ hr {
   transition: all 0.4s ease;
 }
 
+.nav_main-link::before {
+  background-color: transparent !important;
+}
+
 .nav__text-div-link:hover::before {
   z-index: 1;
   opacity: 0;
@@ -220,6 +240,7 @@ hr {
   position: relative;
   top: 0;
   left: 0;
+  max-height: auto;
   height: 38rem;
 }
 
@@ -234,13 +255,19 @@ hr {
 }
 
 .right-box {
-  width: 36%;
+  max-width: 30rem;
   height: inherit;
   position: absolute;
   right: 0;
   top: 0;
   z-index: 0;
-  background-color: #eee;
+  overflow: hidden;
+}
+
+.profile-img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
 }
 
 .main__name-box > h1 {
@@ -309,7 +336,7 @@ hr {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   margin-bottom: 3rem;
 }
 
@@ -378,6 +405,7 @@ hr {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  transition: all 0.3s ease;
 }
 
 .project_img {
@@ -508,6 +536,10 @@ hr {
 
   /********** Main Section **********/
 
+  .main__box {
+    height: 34rem;
+  }
+
   .left-box .heading {
     font-size: 2rem;
   }
@@ -523,7 +555,6 @@ hr {
 
   .right-box {
     display: none;
-    height: 0;
     visibility: hidden;
   }
 
@@ -555,47 +586,116 @@ hr {
 /* Responsive Size 840px */
 
 @media screen and (width <= 840px) {
+  /********** Main Section **********/
+  .main__box {
+    height: 28rem;
+  }
+
+  .main__name-box {
+    width: 100%;
+  }
+
+  /********** Project Section **********/
+
   .projects_cont-box {
     grid-template-columns: none;
     grid-template-rows: 1fr auto;
   }
 
-  .project-text-box1 {
+  .projects_cont-box:nth-child(2n) .project_cont-sm-box:last-child {
+    order: 2;
+  }
+  .projects_cont-box:nth-child(2n) .project_cont-sm-box:first-child {
+    order: 1;
+  }
+
+  .projects_cont-box .project_cont-sm-box:last-child {
     padding-top: 2rem;
   }
 
-  .project-text-box2 {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+  .project-img-box {
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
   }
 }
 
 /* Responsive Size  740px*/
 
 @media screen and (width <= 740px) {
+  /* navbar Section */
+  .phone__navbar.show {
+    grid-template-columns: none;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 0;
+  }
+
+  .phone__navbar.show .close-menu {
+    position: absolute;
+    top: 3rem;
+    right: 3rem;
+  }
+
+  .phone__navbar.show .phone__navbar-div:last-child {
+    align-items: flex-start;
+    justify-content: flex-end;
+    color: white !important;
+  }
+
+  .phone__navbar-div > .nav__text-div-text {
+    color: white;
+    line-height: 1.8;
+  }
+  .phone__navbar-div > .nav__text-div-text > a {
+    color: white;
+  }
+
+  /* Main section */
+
   .left-box .heading {
     font-size: 1.2rem;
   }
 
   .main__name-box {
-    width: 90%;
+    width: 100%;
     margin: auto;
   }
 
   .main__name-box > h1 {
-    font-size: 6rem;
+    font-size: 5.5rem;
+  }
+
+  .main-pera {
+    font-size: 1rem;
+  }
+
+  /* About section */
+
+  .box3 .box-sm {
+    /* flex-direction: column; */
+    align-items: flex-start;
+  }
+
+  .box3 .box-sm h2 {
+    font-size: 1rem;
+  }
+  .box3 .box-sm h2:first-child {
+    margin-bottom: 1rem;
   }
 
   /* Footer Section */
 
-  .footer-div:first-child {
-    display: flex;
+  .footer-div {
     flex-direction: column;
+    text-align: center;
     width: 100%;
   }
 
-  .footer-div:first-child .heading {
+  .footer-div .heading {
     font-size: 3rem;
     font-weight: 500;
+    margin-bottom: 1rem;
+  }
+
+  .footer-div:last-child {
+    flex-direction: row;
   }
 }
