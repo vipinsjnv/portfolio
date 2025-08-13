@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PortFolio | Codelit</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../subprojects.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <Navbar class="Navbar" id="Navbar">
+      <div class="nav active">
+        <div class="nav__div nav__text-div">
+          <h2 class="nav__text-div-text fixed">
+            Based in<br />Faridabad, India
+          </h2>
+          <h2 class="nav__text-div-text tobehide">
+            Say hello <br />
+            <a class="nav__text-div-link">vipinsinghjnv@gmail.com</a>
+          </h2>
+        </div>
+        <div class="nav__div nav__link-box tobehide">
+          <a href="/index.html" class="nav__text-div-link nav_main-link"
+            >Home</a
+          >
+          <a href="#About" class="nav__text-div-link nav_main-link">About</a>
+          <a
+            href="/Projects.html"
+            class="nav__text-div-link nav_main-link active"
+            >Project</a
+          >
+          <a href="#Contact" class="nav__text-div-link nav_main-link"
+            >Contact</a
+          >
+        </div>
+        <div class="nav_div hidden hidden_hamburgerbox" id="hamburgercont">
+          <button
+            class="nav__text-div-link hamburger fixed"
+            id="hamburger-show"
+          >
+            Menu
+          </button>
+        </div>
+      </div>
+      <div class="phone__navbar" id="phone-nav">
+        <div class="phone__navbar-div">
+          <a href="#Home" class="phone__navbar-link">Home</a>
+          <a href="#About" class="phone__navbar-link">About</a>
+          <a href="#Project" class="phone__navbar-link">Project</a>
+          <a href="#Contact" class="phone__navbar-link">Contact</a>
+        </div>
+        <div class="phone__navbar-div">
+          <button
+            class="nav__text-div-link hamburger close-menu"
+            id="hamburger-close"
+          >
+            Close
+          </button>
+
+          <h2 class="nav__text-div-text">
+            Say hello <br />
+            <a class="nav__text-div-link">vipinsinghjnv@gmail.com</a>
+          </h2>
+        </div>
+      </div>
+    </Navbar>
+
+    <section>
+      <div class="back-button-cont">
+        <img
+          src="../assets/icons/right-arrow.png"
+          width="25"
+          height="20"
+          class="back-icon"
+          alt=""
+        />
+        <a href="/index.html" class="back-button">back to projects</a>
+      </div>
+
+      <h1 class="explanation-heading">
+        feedbick - a easy-to-use portal for <br />
+        viewing, filtering, and managing the data.
+      </h1>
+
+      <div class="row first">
+        <div class="col">
+          <h2 class="sub-heading-primary">Project Overview</h2>
+          <h2 class="sub-heading-primary">UX - UI DESIGN</h2>
+        </div>
+        <div class="col">
+          <p class="sub-pera">
+            The Feedback Portal is a centralized platform for collecting and
+            managing real-time user feedback from physical devices installed at
+            workplaces and washrooms. The goal was to design a clean, serious,
+            and data-focused interface that supports different levels of users
+            via a hierarchical login system and provides advanced table
+            management features.
+          </p>
+        </div>
+      </div>
+
+      <div class="photo-container">
+        <img src="../assets/Feedbick/projects.png" alt="Projects" />
+      </div>
+
+      <div class="row3">
+        <div class="col">
+          <h2 class="sub-heading-primary">TIMEFRAME</h2>
+          <p class="sub-pera">12 Weeks</p>
+        </div>
+        <div class="col">
+          <h2 class="sub-heading-primary">My role</h2>
+          <p class="sub-pera">
+            UX + UI Design, Visual design,<br />
+            User flow, Research, Prototyping + <br />
+            Testing
+          </p>
+        </div>
+        <div class="col">
+          <h2 class="sub-heading-primary">Tools</h2>
+          <p class="sub-pera">
+            Figma, Fig jam, Zoom, Google <br />
+            Forms, Illustrator, Excel
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <h2 class="sub-heading-primary">The Challenge</h2>
+          <h3 class="sub-heading-secondary">What were the challenges?</h3>
+        </div>
+        <div class="col">
+          <p class="sub-pera">
+            Organizations were collecting feedback from users via devices but
+            lacked a unified, easy-to-use portal for viewing, filtering, and
+            managing that data. Existing tools were either too cluttered or too
+            technical.
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <h2 class="sub-heading-primary">Project Goals</h2>
+        </div>
+        <div class="col">
+          <ul>
+            <li>
+              Design a responsive portal for both desktop and mobile views.
+            </li>
+            <li>
+              Implement a clean, professional interface to support serious,
+              data-focused use.
+            </li>
+            <li>
+              Enable users to easily view, filter, and download feedback data.
+            </li>
+            <li>Support multiple user roles with different access levels.</li>
+            <li>Make the UI intuitive for non-technical users.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col">
+        <h2 class="sub-heading-primary">MY Design Process</h2>
+      </div>
+
+      <div class="arrow-cont">
+        <div class="flow-wrap" id="flowWrap">
+          <!-- SVG that will contain shafts and arrowheads -->
+          <svg
+            class="connectors"
+            id="svgConn"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+          ></svg>
+
+          <!-- The nodes (circles) -->
+          <div
+            class="flow"
+            id="flowGrid"
+            role="list"
+            aria-label="Flow of six steps"
+          >
+            <div class="node c1" id="n1" role="listitem" aria-label="Step 1">
+              Empathize
+            </div>
+            <div class="node c2" id="n2" role="listitem" aria-label="Step 2">
+              Define
+            </div>
+            <div class="node c3" id="n3" role="listitem" aria-label="Step 3">
+              ideate
+            </div>
+            <div class="node c4" id="n4" role="listitem" aria-label="Step 4">
+              Design
+            </div>
+            <div class="node c5" id="n5" role="listitem" aria-label="Step 5">
+              prototype
+            </div>
+            <div class="node c6" id="n6" role="listitem" aria-label="Step 6">
+              Test
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row low-margin">
+        <div class="col">
+          <h2 class="sub-heading-primary">user personas</h2>
+        </div>
+        <div class="col">
+          <ul>
+            <li>
+              <b>Facility Manager — </b>needs access to view and act on
+              real-time feedback.
+            </li>
+            <li>
+              <b>Admin/Executive — </b> controls roles and monitors all
+              locations.
+            </li>
+            <li>
+              <b>Small Business Owner: </b>Wants a simple, cost-effective
+              website.
+
+              <b>Staff Supervisor — </b>views only site-specific reports and
+              KPIs.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row2 image-row">
+        <div class="col">
+          <img src="../assets/Feedbick/persona1.png" alt="persona1" />
+        </div>
+        <div class="col">
+          <img src="../assets/Feedbick/persona2.png" alt="persona2" />
+        </div>
+      </div>
+
+      <div class="design-system-row">
+        <h2 class="sub-heading-primary">design system</h2>
+
+        <h1 class="design-system-heading">typography & colours</h1>
+        <div class="row2">
+          <div class="col">
+            <p class="sub-pera">Fonts Used</p>
+            <div>
+              <h1 class="design-system-heading nato-Sans">Noto Sans</h1>
+              <p class="sub-pera syne">
+                ABCDEFGHIJKLMNOPQRSTUVWXYZ<br />
+                abcdefghijklmnopqrstuvwxyz <br />
+                1234567890 <br />
+                !@#$%^&*()
+              </p>
+              <p>
+                It’s tabular font.Noto is a global font collection for writing
+                in all modern and ancient languages. 
+              </p>
+              <p>
+                It has italic styles, multiple weights and widths, and 3,741
+                glyphs.
+              </p>
+            </div>
+          </div>
+          <div class="col">
+            <p class="sub-pera">Colors</p>
+            <div class="row3">
+              <div class="col desgin-system-col">
+                <svg
+                  width="88"
+                  height="100"
+                  viewBox="0 0 88 100"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M48 0C4.80004 0 0 36 0 59.5C0 83 18.0004 100 43.5002 100C63.9001 100 80.5001 74.5 84.0002 65C90.0002 43.3333 91.2 0 48 0Z"
+                    fill="#59CE8F"
+                  />
+                </svg>
+                <p class="sub-pera svg-pera">
+                  Primary Colour <br />
+                  #59CE8F
+                </p>
+              </div>
+              <div class="col desgin-system-col">
+                <svg
+                  width="88"
+                  height="100"
+                  viewBox="0 0 88 100"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M48 0C4.80004 0 0 36 0 59.5C0 83 18.0004 100 43.5002 100C63.9001 100 80.5001 74.5 84.0002 65C90.0002 43.3333 91.2 0 48 0Z"
+                    fill="#272727"
+                  />
+                </svg>
+
+                <p class="sub-pera svg-pera">
+                  Secondary Colour <br />
+                  #272727
+                </p>
+              </div>
+              <div class="col desgin-system-col">
+                <svg
+                  width="89"
+                  height="102"
+                  viewBox="0 0 89 102"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M49 1C5.80004 1 1 37 1 60.5C1 84 19.0004 101 44.5002 101C64.9001 101 81.5001 75.5 85.0002 66C91.0002 44.3333 92.2 1 49 1Z"
+                    fill="white"
+                    stroke="#9F9F9F"
+                  />
+                </svg>
+
+                <p class="sub-pera svg-pera">
+                  BG Colour <br />
+                  #FFFFFF
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-container">
+        <h2 class="sub-heading-primary low-margin">Low fidelity wireframe</h2>
+        <img src="../assets/Feedbick/Low_fi.png" alt="Projects" />
+      </div>
+
+      <div class="photo-container">
+        <h2 class="sub-heading-primary low-margin">High fidelity wireframe</h2>
+        <img src="../assets/Feedbick/High_fi.png" alt="Projects" />
+      </div>
+
+      <div class="photo-container">
+        <img src="../assets/Feedbick/Complete_main.png" alt="Projects" />
+      </div>
+    </section>
+
+    <!-- footer section -->
+    <section class="Footer">
+      <hr />
+
+      <div class="footer-div">
+        <h2 class="heading">Let's Collaborate</h2>
+        <a class="nav__text-div-link">vipinsinghjnv@gmail.com</a>
+      </div>
+      <div class="footer-div footer-last-div">
+        <h4 class="footer-last-heading">© VIPIN KUMAR 2025</h4>
+        <a class="nav__text-div-link">Linkedin</a>
+      </div>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,336 @@
+:root {
+  --size: 110px;
+  --gap: 120px;
+  --arrow-shaft: 3px;
+  --arrow-length: 14; /* px */
+  --arrow-width: 14; /* px */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* primary classes */
+
+.sub-heading-primary {
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 1.8rem;
+}
+
+.sub-heading-secondary {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #111;
+  text-transform: capitalize;
+  margin-bottom: 1.8rem;
+}
+
+.sub-pera {
+  font-size: 1.2rem;
+  font-weight: 400;
+  font-family: var(--secondary-font);
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 5rem;
+  margin-bottom: 6rem;
+}
+
+.row2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 3rem;
+  margin-bottom: 6rem;
+}
+
+.row3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 3rem;
+  margin-bottom: 6rem;
+  width: 100%;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  overflow: hidden;
+}
+
+.image-row {
+  grid-gap: 1rem;
+}
+
+.col > img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style-type: square;
+  line-height: 1.2;
+}
+
+ul > li {
+  font-size: 1.1rem;
+  font-weight: 400;
+  font-family: var(--secondary-font);
+  margin-left: 1.6rem;
+}
+
+/* secondary classes */
+
+.back-button-cont {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  margin-bottom: 4rem;
+}
+
+.back-icon {
+  transform: rotate(180deg);
+  margin-right: 1rem;
+}
+
+.back-button {
+  font-weight: 600;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
+}
+
+.explanation-heading {
+  font-size: 3.5rem;
+  font-weight: 600;
+  font-family: var(--secondary-font);
+  text-transform: uppercase;
+  width: 100%;
+  margin-bottom: 4rem;
+}
+
+.first > .col:first-child > h2 {
+  margin-bottom: 0.5rem;
+}
+
+.photo-container {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  margin-bottom: 6rem;
+}
+
+.photo-container > img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+
+.photo-container > h2 {
+  margin-bottom: 4rem;
+}
+
+.low-margin {
+  margin-bottom: 3rem;
+}
+
+.design-system-row {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.design-system-heading {
+  font-size: 2rem;
+  font-family: var(--secondary-font);
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+.col > .sub-pera {
+  margin-bottom: 2rem;
+}
+
+.col > div > .design-system-heading {
+  margin-bottom: 0.5rem;
+}
+
+.col > div > .sub-pera {
+  margin-bottom: 2rem;
+}
+
+.col > svg {
+  margin-bottom: 1rem;
+}
+
+.svg-pera {
+  text-align: center;
+}
+
+.desgin-system-col {
+  justify-content: center;
+  align-items: center;
+}
+
+.Montserrat {
+  font-family: var(--primary-font);
+}
+
+.syne {
+  font-family: var(--secondary-font);
+}
+
+/* circle section */
+
+.arrow-cont {
+  margin: 0;
+  min-height: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 28px;
+  margin-bottom: 6rem;
+}
+
+/* container is positioned so SVG can cover it */
+.flow-wrap {
+  position: relative;
+  padding: 20px;
+  border-radius: 14px;
+}
+
+.flow {
+  display: grid;
+  grid-auto-flow: column;
+  gap: var(--gap);
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.node {
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+  font-size: 15px;
+  color: white;
+  position: relative;
+  z-index: 2; /* above svg */
+  user-select: none;
+  text-transform: uppercase;
+  font-family: var(--secondary-font);
+  font-weight: 500;
+  box-shadow: 0 8px 18px rgba(25, 35, 70, 0.08);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+/* colors */
+.c1 {
+  background: hsla(148, 34%, 47%, 1);
+}
+.c2 {
+  background: hsla(199, 46%, 37%, 1);
+}
+.c3 {
+  background: hsla(277, 32%, 54%, 1);
+}
+.c4 {
+  background: hsla(40, 75%, 42%, 1);
+}
+.c5 {
+  background: hsla(9, 61%, 42%, 1);
+}
+.c6 {
+  background: hsla(212, 53%, 53%, 1);
+}
+
+/* the svg that draws arrows: full-size and behind the nodes */
+.connectors {
+  position: absolute;
+  inset: 0;
+  z-index: 1; /* behind nodes */
+  pointer-events: none; /* allow clicking nodes */
+  overflow: visible;
+}
+
+/* style for shaft lines and arrowheads */
+.shaft {
+  stroke: #39404a;
+  stroke-width: var(--arrow-shaft);
+  stroke-linecap: round;
+  fill: none;
+}
+.arrowhead {
+  fill: #39404a;
+  stroke: none;
+}
+
+/* Responsive: mobile snake layout (3 on top, 3 bottom reversed visually) */
+@media (max-width: 1100px) {
+  :root {
+    --size: 86px;
+    --gap: 64px;
+    --arrow-shaft: 3;
+    --arrow-length: 12;
+    --arrow-width: 10;
+  }
+
+  .flow {
+    grid-template-columns: repeat(3, minmax(72px, 140px));
+    grid-template-rows: auto auto;
+    gap: 40px 48px;
+    width: min(720px, 100%);
+  }
+
+  /* place nodes specifically so bottom row is reversed visually: 6 5 4 */
+  .c1 {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .c2 {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .c3 {
+    grid-column: 3;
+    grid-row: 1;
+  }
+
+  .c4 {
+    grid-column: 3;
+    grid-row: 2;
+  } /* below 3 */
+  .c5 {
+    grid-column: 2;
+    grid-row: 2;
+  } /* below 2 */
+  .c6 {
+    grid-column: 1;
+    grid-row: 2;
+  } /* below 1 */
+}
+
+/* small accessibility visual */
+.sr-only {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+}

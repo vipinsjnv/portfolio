@@ -85,6 +85,7 @@ hr {
   position: relative;
   width: fit-content;
   transition: all 0.3s ease;
+  text-decoration: none;
 }
 
 .main_button::before {
@@ -102,22 +103,6 @@ hr {
 .main_button:hover::before {
   width: 100%;
 }
-
-/* .main_button::after {
-  content: "";
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  display: block;
-  width: 0;
-  background-color: crimson;
-  height: 2px;
-  transition: all 0.4s ease;
-}
-
-.main_button:hover::after {
-  width: 110%;
-} */
 
 /********** Navbar section **********/
 
@@ -223,12 +208,14 @@ hr {
   background-color: transparent !important;
 }
 
-.nav__text-div-link:hover::before {
+.nav__text-div-link:hover::before,
+.nav__text-div-link.active::before {
   z-index: 1;
   opacity: 0;
 }
 
-.nav__text-div-link:hover::after {
+.nav__text-div-link:hover::after,
+.nav__text-div-link.active::after {
   z-index: 2;
   opacity: 1;
   width: 100%;
@@ -384,12 +371,12 @@ hr {
 
 .pill-text {
   width: fit-content;
-  padding: 1.2rem;
-  font-size: 1.2rem;
+  padding: 1rem 1.4rem;
+  font-size: 1.1rem;
   color: black;
-  border: 1px solid black;
+  border: 1px solid #999;
   border-radius: 40px;
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
 }
 
 .sm-project-main-cont > .sub-heading {
@@ -405,13 +392,18 @@ hr {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  transition: all 0.3s ease;
+  transition: all 0.4s ease;
+}
+
+.project-img-box:hover .project_img {
+  transform: scale(1.05) rotate(-2deg);
 }
 
 .project_img {
   object-fit: cover;
   width: 100%;
   height: auto;
+  transition: all 0.3s ease;
 }
 
 /********** Footer Section **********/
@@ -586,9 +578,25 @@ hr {
 /* Responsive Size 840px */
 
 @media screen and (width <= 840px) {
+  .nav.active .nav__text-div-text.fixed {
+    width: 10rem;
+  }
+
+  section {
+    padding: 4rem 1rem;
+  }
+
+  .nav {
+    padding: 2rem 1rem 0;
+  }
+
+  .Footer {
+    padding: 4rem 1rem 2rem;
+  }
+
   /********** Main Section **********/
   .main__box {
-    height: 28rem;
+    height: 34rem;
   }
 
   .main__name-box {
@@ -650,6 +658,10 @@ hr {
 
   /* Main section */
 
+  .main__box {
+    height: 28rem;
+  }
+
   .left-box .heading {
     font-size: 1.2rem;
   }
@@ -667,6 +679,13 @@ hr {
     font-size: 1rem;
   }
 
+  .main_pera {
+    font-size: 1rem;
+  }
+
+  .sub-heading {
+    font-size: 1.5rem;
+  }
   /* About section */
 
   .box3 .box-sm {
@@ -683,19 +702,19 @@ hr {
 
   /* Footer Section */
 
-  .footer-div {
+  .footer-first-div {
+    display: flex;
     flex-direction: column;
-    text-align: center;
-    width: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
   }
 
-  .footer-div .heading {
-    font-size: 3rem;
-    font-weight: 500;
+  .footer-first-div > .heading {
     margin-bottom: 1rem;
+    font-size: 2.4rem;
   }
 
-  .footer-div:last-child {
-    flex-direction: row;
+  .footer-last-heading {
+    font-size: 1.2rem;
   }
 }
