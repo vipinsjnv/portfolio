@@ -518,6 +518,13 @@ hr {
     color: white !important;
   }
 
+  .phone__navbar-div > .nav__text-div-text {
+    color: white;
+  }
+  .phone__navbar-div > .nav__text-div-text > a {
+    color: white;
+  }
+
   .phone__navbar-link:last-child {
     margin-bottom: -1rem;
   }
@@ -679,11 +686,7 @@ hr {
   }
 
   .phone__navbar-div > .nav__text-div-text {
-    color: white;
     line-height: 1.8;
-  }
-  .phone__navbar-div > .nav__text-div-text > a {
-    color: white;
   }
 
   /* Main section */
@@ -748,4 +751,5 @@ hr {
     font-size: 1.2rem;
   }
 }
+
 
