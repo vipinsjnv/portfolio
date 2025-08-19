@@ -425,7 +425,7 @@ hr {
   object-fit: cover;
   width: 100%;
   height: auto;
-  transition: all 0.3s ease;
+  transition: all 0.8s ease;
 }
 
 /********** Footer Section **********/
@@ -656,12 +656,17 @@ hr {
     grid-template-columns: none;
     grid-template-rows: repeat(2, 1fr);
     gap: 0;
+    padding: 1rem;
+  }
+
+  .phone__navbar-link {
+    font-size: 2.3rem;
   }
 
   .phone__navbar.show .close-menu {
     position: absolute;
-    top: 3rem;
-    right: 3rem;
+    top: 2rem;
+    right: 1rem;
   }
 
   .phone__navbar.show .phone__navbar-div:last-child {
