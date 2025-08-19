@@ -514,6 +514,10 @@ hr {
     margin-bottom: 1rem;
   }
 
+  .phone__navbar.show .phone__navbar-div:last-child {
+    color: white !important;
+  }
+
   .phone__navbar-link:last-child {
     margin-bottom: -1rem;
   }
@@ -672,7 +676,6 @@ hr {
   .phone__navbar.show .phone__navbar-div:last-child {
     align-items: flex-start;
     justify-content: flex-end;
-    color: white !important;
   }
 
   .phone__navbar-div > .nav__text-div-text {
@@ -745,3 +748,4 @@ hr {
     font-size: 1.2rem;
   }
 }
+
