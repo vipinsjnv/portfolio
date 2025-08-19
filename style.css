@@ -1,5 +1,5 @@
 /* fonts */
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Syne:wght@400..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Syne:wght@400..800&display=swap");
 
 *,
 *::after,
@@ -11,19 +11,37 @@
 
 :root {
   --primary-color: ;
-  --secondary-color: ;
-  --tertiry-color: ;
-  --black: ;
-  --white: ;
+  --secondary-color: #eee;
+  --tertiry-color: crimson;
+  --black: #000;
+  --white: #fff;
+
+  --test-color-1: hsla(148, 34%, 47%, 1);
+  --test-color-2: hsla(199, 46%, 37%, 1);
+  --test-color-3: hsla(277, 32%, 54%, 1);
+  --test-color-4: hsla(40, 75%, 42%, 1);
+  --test-color-5: hsla(9, 61%, 42%, 1);
+  --test-color-6: hsla(212, 53%, 53%, 1);
 
   /* fonts */
   --primary-font: "Montserrat", sans-serif;
   --secondary-font: "Syne", sans-serif;
+  --nato-font: "Noto Sans", sans-serif;
+
+  --fontsize-p-sm: 1rem;
+  --fontsize-p-lg: 1.1rem;
+  --fontsize-p-ex: 1.2rem;
+
+  --fontsize-h-sm: ;
+  --fontsize-h-lg: ;
+  --fontsize-h-ex: ;
 
   /* padding */
+
+  --p-primary: 4rem 3rem;
   --p: ;
   --p-sm: ;
-  --p-lg: ;
+  --p-lg: 6rem;
 
   /* margin */
   --m: ;
@@ -33,8 +51,11 @@
   /* trantionss */
 }
 
-body {
+html {
   scroll-behavior: smooth;
+}
+
+body {
   font-size: 16px;
   font-family: var(--primary-font);
 }
@@ -49,20 +70,20 @@ section {
   width: 100%;
   max-width: 1872px;
   height: auto;
-  padding: 4rem 3rem;
+  padding: var(--p-primary);
 }
 
 hr {
   width: 100%;
   height: 2px;
-  background-color: #eee;
+  background-color: var(--secondary-color);
   border: none;
   margin: 1rem auto;
 }
 
 .main_pera {
-  font-size: 1.1rem;
-  color: black;
+  font-size: var(--fontsize-p-lg);
+  color: var(--black);
   font-family: var(--secondary-font);
   font-weight: 500;
 }
