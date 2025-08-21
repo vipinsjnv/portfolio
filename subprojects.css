@@ -210,147 +210,25 @@ ul > li > span {
 
 /* circle section */
 
-.arrow-cont {
-  margin: 0;
-  min-height: 10rem;
+.process-cont {
+  width: 100%;
+  height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 28px;
+  padding: 28px 0;
   margin-bottom: 6rem;
 }
 
-/* container is positioned so SVG can cover it */
-.flow-wrap {
-  position: relative;
-  padding: 20px;
-  border-radius: 14px;
+.process-image {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
 }
 
-.flow {
-  display: grid;
-  grid-auto-flow: column;
-  gap: var(--gap);
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
-
-.node {
-  width: var(--size);
-  height: var(--size);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-weight: 700;
-  font-size: 15px;
-  color: white;
-  position: relative;
-  z-index: 2; /* above svg */
-  user-select: none;
-  text-transform: uppercase;
-  font-family: var(--secondary-font);
-  font-weight: 500;
-  box-shadow: 0 8px 18px rgba(25, 35, 70, 0.08);
-  transition: transform 0.18s ease, box-shadow 0.18s ease;
-}
-
-/* colors */
-.c1 {
-  background: var(--test-color-1);
-}
-.c2 {
-  background: var(--test-color-2);
-}
-.c3 {
-  background: var(--test-color-3);
-}
-.c4 {
-  background: var(--test-color-4);
-}
-.c5 {
-  background: var(--test-color-5);
-}
-.c6 {
-  background: var(--test-color-6);
-}
-
-/* the svg that draws arrows: full-size and behind the nodes */
-.connectors {
-  position: absolute;
-  inset: 0;
-  z-index: 1; /* behind nodes */
-  pointer-events: none; /* allow clicking nodes */
-  overflow: visible;
-}
-
-/* style for shaft lines and arrowheads */
-.shaft {
-  stroke: #39404a;
-  stroke-width: var(--arrow-shaft);
-  stroke-linecap: round;
-  fill: none;
-}
-.arrowhead {
-  fill: #39404a;
-  stroke: none;
-}
-
-/* Responsive: mobile snake layout (3 on top, 3 bottom reversed visually) */
-@media (max-width: 1100px) {
-  :root {
-    --size: 86px;
-    --gap: 64px;
-    --arrow-shaft: 3;
-    --arrow-length: 12;
-    --arrow-width: 10;
-  }
-
-  .flow {
-    grid-template-columns: repeat(3, minmax(72px, 140px));
-    grid-template-rows: auto auto;
-    gap: 40px 48px;
-    width: min(720px, 100%);
-  }
-
-  /* place nodes specifically so bottom row is reversed visually: 6 5 4 */
-  .c1 {
-    grid-column: 1;
-    grid-row: 1;
-  }
-  .c2 {
-    grid-column: 2;
-    grid-row: 1;
-  }
-  .c3 {
-    grid-column: 3;
-    grid-row: 1;
-  }
-
-  .c4 {
-    grid-column: 3;
-    grid-row: 2;
-  } /* below 3 */
-  .c5 {
-    grid-column: 2;
-    grid-row: 2;
-  } /* below 2 */
-  .c6 {
-    grid-column: 1;
-    grid-row: 2;
-  } /* below 1 */
-}
-
-/* small accessibility visual */
-.sr-only {
-  position: absolute !important;
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
-  clip: rect(1px, 1px, 1px, 1px);
-  white-space: nowrap;
+.sm-size {
+  display: none;
+  visibility: hidden;
 }
 
 /* first break point */
@@ -365,7 +243,7 @@ ul > li > span {
 
 @media screen and (width <= 740px) {
   .explanation-heading {
-    font-size: 2rem;
+    font-size: 2.1rem;
   }
 
   .row {
@@ -379,6 +257,14 @@ ul > li > span {
     margin-bottom: 3rem;
   }
 
+  .TIMEFRAME {
+    margin-bottom: 2rem;
+  }
+
+  .process-cont {
+    margin-bottom: 2rem;
+  }
+
   .row3.TIMEFRAME {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -387,6 +273,18 @@ ul > li > span {
 
   .row3.TIMEFRAME .col:first-child {
     grid-row: 1 / span 2;
+  }
+
+  .sm-size {
+    display: flex;
+    visibility: visible;
+    height: auto;
+    max-width: 100%;
+  }
+
+  .lg-size {
+    display: none;
+    visibility: hidden;
   }
 
   .col > .row3 {

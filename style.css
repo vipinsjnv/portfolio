@@ -250,11 +250,14 @@ hr {
   top: 0;
   left: 0;
   max-height: auto;
-  height: 38rem;
+  height: 36rem;
 }
 
 .left-box {
   width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   max-width: 60rem;
   height: inherit;
   position: absolute;
@@ -307,7 +310,6 @@ hr {
   font-size: 1.2rem;
   font-weight: 500;
   margin-top: 2rem;
-  margin-bottom: 2rem;
 }
 
 /********** About Section  **********/
@@ -683,10 +685,15 @@ hr {
   .phone__navbar.show .phone__navbar-div:last-child {
     align-items: flex-start;
     justify-content: flex-end;
+    color: white !important;
   }
 
   .phone__navbar-div > .nav__text-div-text {
+    color: white;
     line-height: 1.8;
+  }
+  .phone__navbar-div > .nav__text-div-text > a {
+    color: white;
   }
 
   /* Main section */
@@ -751,5 +758,3 @@ hr {
     font-size: 1.2rem;
   }
 }
-
-
