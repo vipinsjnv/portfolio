@@ -1,0 +1,32 @@
+# Dependencies
+node_modules/
+
+# Production output
+dist/
+build/
+
+# Local environment
+.env
+.env.*
+!.env.example
+
+# Vite / tooling
+.vite/
+*.tsbuildinfo
+vite.config.*.timestamp-*
+
+# Logs
+*.log
+logs/
+
+# OS / editor files
+.DS_Store
+Thumbs.db
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+
+# Temporary files
+.tmp/
